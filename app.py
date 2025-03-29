@@ -12,5 +12,14 @@ def chat(input_text):
     result = response.json().get("generated_text", "No response")
     return result
 
-iface = gr.Interface(fn=chat, inputs="text", outputs="text", title="Chatbot UI")
+iface = gr.Interface(
+    fn=chat,
+    inputs="text",
+    outputs="text",
+    title="Chatbot UI",
+    flagging="never"
+)
 iface.launch(server_name="0.0.0.0", server_port=7860)
+
+
+
