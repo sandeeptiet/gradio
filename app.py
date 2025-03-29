@@ -13,4 +13,4 @@ def chat(input_text):
     return result
 
 iface = gr.Interface(fn=chat, inputs="text", outputs="text", title="Chatbot UI")
-iface.launch()
+iface.launch(server_name="0.0.0.0", server_port=7860)
